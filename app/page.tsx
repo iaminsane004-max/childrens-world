@@ -105,6 +105,25 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Contact form state
+  const [parentName, setParentName] = useState("");
+  const [childAge, setChildAge] = useState("");
+  const [program, setProgram] = useState("Infant Care");
+  const [inquiryDetails, setInquiryDetails] = useState("");
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!parentName.trim()) {
+      alert("Please enter your name");
+      return;
+    }
+    const formattedPhone = "919387257010";
+    const text = `Hi! I'm ${parentName}. I would like to inquire about ${program} for my ${childAge || "N/A"} child. Details: ${inquiryDetails || "None provided"}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${formattedPhone}?text=${encodedText}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   // Page Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
@@ -438,19 +457,36 @@ export default function Home() {
               {/* Bubbly Form */}
               <div className="bg-white rounded-2xl p-6 md:p-8 text-charcoal border-4 border-charcoal shadow-[4px_4px_0px_0px_#2D2A26]">
                 <h3 className="text-xl font-fredoka font-extrabold mb-5 text-charcoal">Send a Message</h3>
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-4" onSubmit={handleContactSubmit}>
                   <div>
                     <label className="block text-[10px] font-fredoka font-extrabold text-charcoal uppercase tracking-wider mb-1">Parent&apos;s Name</label>
-                    <input type="text" placeholder="Your Name" className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold" />
+                    <input 
+                      type="text" 
+                      placeholder="Your Name" 
+                      className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold" 
+                      value={parentName}
+                      onChange={(e) => setParentName(e.target.value)}
+                      required
+                    />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-[10px] font-fredoka font-extrabold text-charcoal uppercase tracking-wider mb-1">Child&apos;s Age</label>
-                      <input type="text" placeholder="Age" className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold" />
+                      <input 
+                        type="text" 
+                        placeholder="Age" 
+                        className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold" 
+                        value={childAge}
+                        onChange={(e) => setChildAge(e.target.value)}
+                      />
                     </div>
                     <div>
                       <label className="block text-[10px] font-fredoka font-extrabold text-charcoal uppercase tracking-wider mb-1">Select Program</label>
-                      <select className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold text-charcoal">
+                      <select 
+                        className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold text-charcoal"
+                        value={program}
+                        onChange={(e) => setProgram(e.target.value)}
+                      >
                         <option>Infant Care</option>
                         <option>Preschool</option>
                         <option>Primary Care</option>
@@ -460,7 +496,13 @@ export default function Home() {
                   </div>
                   <div>
                     <label className="block text-[10px] font-fredoka font-extrabold text-charcoal uppercase tracking-wider mb-1">Inquiry Details</label>
-                    <textarea placeholder="Tell us how we can help..." rows={3} className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold resize-none"></textarea>
+                    <textarea 
+                      placeholder="Tell us how we can help..." 
+                      rows={3} 
+                      className="w-full px-4 py-2.5 cartoon-input text-xs font-semibold resize-none"
+                      value={inquiryDetails}
+                      onChange={(e) => setInquiryDetails(e.target.value)}
+                    ></textarea>
                   </div>
                   <button type="submit" className="w-full cartoon-btn bg-sunny-yellow text-charcoal py-3 text-sm">
                     Send message
