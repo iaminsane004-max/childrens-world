@@ -118,7 +118,7 @@ export default function Home() {
       return;
     }
     const formattedPhone = "919387257010";
-    const text = `Hi! I'm ${parentName}. I would like to inquire about ${program} for my ${childAge || "N/A"} child. Details: ${inquiryDetails || "None provided"}`;
+    const text = `Hi! I'm ${parentName}. I would like to inquire about ${program} for my ${childAge || "N/A"} year child. Details: ${inquiryDetails || "None provided"}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${formattedPhone}?text=${encodedText}`;
     window.open(whatsappUrl, "_blank");
