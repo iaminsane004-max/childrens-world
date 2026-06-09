@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Award, Users, Heart, Smile, Coffee, BookOpen, Brain, MessageSquare } from "lucide-react";
 
 const features = [
-  { title: "25 Years Trust", desc: "Providing safe local child care & tuitions since 2001.", icon: <Award size={20} className="text-charcoal" />, color: "bg-sunny-yellow" },
+  { title: "24 Years Trust", desc: "Providing safe local child care & tuitions since 2002.", icon: <Award size={20} className="text-charcoal" />, color: "bg-sunny-yellow" },
   { title: "Patient Mentors", desc: "Qualified educators who love teaching with visuals and fun.", icon: <Users size={20} className="text-charcoal" />, color: "bg-mint-green" },
   { title: "Super Safe Area", desc: "Locked safety gates, perimeter fencing, and vetted entries.", icon: <Heart size={20} className="text-charcoal" />, color: "bg-coral-peach" },
   { title: "Fun Playground", desc: "Equipped play area with safe slides, swings, and climbing frames.", icon: <Smile size={20} className="text-charcoal" />, color: "bg-sky-cyan" },

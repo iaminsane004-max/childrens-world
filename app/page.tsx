@@ -162,7 +162,7 @@ export default function Home() {
               CHILDREN&apos;S WORLD
             </motion.h1>
             <span className="text-xs uppercase font-fredoka tracking-[0.25em] text-charcoal/60 mt-4">
-              Making learning happy & simple since 2001
+              Making learning happy & simple since 2002
             </span>
           </motion.div>
         )}
@@ -220,7 +220,7 @@ export default function Home() {
               Simple, happy child care & tuitions
             </h1>
             <p className="text-base md:text-lg text-charcoal/85 mb-8 max-w-xl font-quicksand font-semibold leading-relaxed">
-              We believe education should be visual, colorful, and fun! For 25 years, our home campus has provided loving daycare, preschool programs, and primary-to-high school tutoring.
+              We believe education should be visual, colorful, and fun! For 24 years, our home campus has provided loving daycare, preschool programs, and primary-to-high school tutoring.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a href="#contact" className="cartoon-btn bg-coral-peach text-white text-base px-6 py-3.5 w-full sm:w-auto text-center">
@@ -260,7 +260,7 @@ export default function Home() {
             className="flex flex-wrap justify-center gap-8 md:gap-16 text-center"
           >
             {[
-              { label: "Community Trust", value: "Est. 2001", color: "bg-sunny-yellow" },
+              { label: "Community Trust", value: "Est. 2002", color: "bg-sunny-yellow" },
               { label: "Qualified Team", value: "Best Faculty", color: "bg-mint-green" },
               { label: "Secured Campus", value: "Safe Campus", color: "bg-coral-peach" },
             ].map((stat, idx) => (
@@ -348,9 +348,6 @@ export default function Home() {
                   muted
                   playsInline
                 />
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 border-2 border-charcoal py-1.5 px-3 rounded-xl shadow-[2px_2px_0px_0px_#2D2A26] text-center text-[10px] font-fredoka font-extrabold text-charcoal">
-                  🎥 Daycare Playtime Live
-                </div>
               </div>
             </div>
 
@@ -363,15 +360,15 @@ export default function Home() {
                 See How Our Daycare Sparkles!
               </h2>
               <p className="text-charcoal/80 text-sm md:text-base mb-8 font-semibold leading-relaxed">
-                Take a quick peek inside our happy, creative environment. We prioritize visual engagement, active hands-on learning, and a secure routine to make daycare feel like a second home.
+                We provide a safe, reliable, and supportive second home for your children. From school pickups and academic tuitions to warm, homely meals and flexible timings, we are here to support working families.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { title: "Creative Painting", desc: "Finger paints and messy fun to build motor skills.", bg: "bg-sunny-yellow" },
-                  { title: "Sensory Play", desc: "Interactive blocks, shapes, and soft climbers.", bg: "bg-mint-green" },
-                  { title: "Healthy Snacks", desc: "Fresh fruits, warm milk, and dietician meals.", bg: "bg-coral-peach" },
-                  { title: "Cozy Nap Time", desc: "Comfortable private mats and quiet rest rooms.", bg: "bg-sky-cyan" },
+                  { title: "Homely Food", desc: "Homely, fresh meals arranged for kids even at short notice.", bg: "bg-sunny-yellow" },
+                  { title: "School Pick-Up", desc: "Convenient pickup from local schools available for kids.", bg: "bg-mint-green" },
+                  { title: "Flexible Timings", desc: "Extended and supportive timings on request for working parents.", bg: "bg-coral-peach" },
+                  { title: "School Tuition", desc: "Experienced tutors for dedicated homework and study help.", bg: "bg-sky-cyan" },
                 ].map((item, idx) => (
                   <div key={idx} className="cartoon-card bg-white p-5 flex flex-col items-start">
                     <div className={`w-8 h-8 rounded-lg ${item.bg} border-2 border-charcoal shadow-[2px_2px_0px_0px_#2D2A26] mb-3`} />

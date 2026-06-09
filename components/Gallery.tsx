@@ -6,14 +6,12 @@ import { X, Maximize2 } from "lucide-react";
 import Image from "next/image";
 
 const galleryImages = [
-  { id: 1, category: "Preschool", src: "https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=800&auto=format&fit=crop", alt: "Children painting" },
-  { id: 2, category: "Activities", src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=800&auto=format&fit=crop", alt: "Kids playing outdoors" },
-  { id: 3, category: "Infant Care", src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=800&auto=format&fit=crop", alt: "Baby playing with blocks" },
-  { id: 4, category: "Tuition Classes", src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop", alt: "Students studying" },
-  { id: 5, category: "Events", src: "https://images.unsplash.com/photo-1511629091441-ee46146481b6?q=80&w=800&auto=format&fit=crop", alt: "School event" },
-  { id: 6, category: "Preschool", src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop", alt: "Teacher reading to kids" },
-  { id: 7, category: "Activities", src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop", alt: "Story time group" },
-  { id: 8, category: "Activities", src: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=800&auto=format&fit=crop", alt: "Creative play" },
+  { id: 1, category: "Activities", src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWJAAjyX37tEmo0YffjPj2OYBPlcgcc_EM3YNmtr1Py-arQ8P5AjgM8kzyLBuZDFwgFA_68_-rUu-J8eUhmCI7p9UPf6G2ioZmlCqmQLqJGUHWwzcvHSzSWnEo_tuOweo7exs=w800-h600-k-no", alt: "Outdoor Playground" },
+  { id: 2, category: "Infant Care", src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgzlEcV1KEUkWgtp7Gd-lE1dUDwRWYAEmtxq_i0eHQZbi4eT4UjqyFiDmi4lDhPBGRNuHHYBxaII2OcLdiBobEmDWdYDuQR5UeZVcNg5O7RMWrdvlXwcKOLitITLT8xV8wzbvVGw=w800-h600-k-no", alt: "Indoor Playroom Slide" },
+  { id: 3, category: "Tuition Classes", src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGq3qhMP3-9vLIgCjUHPvySs2GlJJ-39vTPS3iLplehreh79YeyhkzOscOJIoGtxd-aCbfAShBQBvyNTWZ5C_URaPFJF7_fL2mdnscNTn4HVPgO7j6UV8KQBk1xDggIaLzzx5k2zg=w800-h600-k-no", alt: "Kids Studying in Class" },
+  { id: 4, category: "Events", src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE2wgHMMErk43WJVHTMkMxV4nhlbQ5ff304dzwD_QyDuq_FVXJlQtU_J4mRqn03APwXOuFOuJyX3npBXzx1EH-yWk9pLJYLovZrHEFeYcB0a3Bw3yqiExI2k6D1GciArHv4dNP4=w800-h600-k-no", alt: "Onam Pookalam Decoration" },
+  { id: 5, category: "Preschool", src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCmq2lv9qCXJs0TYVAbD5UzMAuPzK-DI6XYn4_thjbCnYE7uMHOLzhXnP2S3vcBxLoIJcn0y-3dNuz7SC_3DBNHWnRHDLHvdj0CXyUyBUjkjhe1Xd7d4HSCRX94ns47Id8Wua5ww=w800-h600-k-no", alt: "Pre-school Activity Room" },
+  { id: 6, category: "Activities", src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVw0uBKnWyC2ic_O4682F1RkmK6c1UUgBE2-UOqAvaYz3ec-5Dgw089Nca_oiIApsjmI6oJsCiY6iTPleb5Ke3aMKgwTBoeBudXOIXSi-81HDBMcipTZPAvfNfRHabiIeLhavv=w800-h600-k-no", alt: "Daycare Main Entrance" },
 ];
 
 const categories = ["All", "Infant Care", "Preschool", "Activities", "Events", "Tuition Classes"];
