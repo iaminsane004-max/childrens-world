@@ -532,6 +532,21 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/919387257010"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BA56] text-white rounded-full border-4 border-charcoal shadow-[4px_4px_0px_0px_#2D2A26] hover:scale-105 active:scale-95 transition-transform group"
+        aria-label="Chat on WhatsApp"
+      >
+        <svg viewBox="0 0 24 24" className="w-7 h-7 fill-white">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.393 9.805-9.799.002-2.592-1.002-5.029-2.829-6.858C16.427 2.12 13.998.985 11.993.985c-5.405 0-9.806 4.394-9.809 9.801-.001 1.733.454 3.424 1.32 4.93L2.43 20.306l4.217-1.152zM17.067 14c-.274-.137-1.62-.8-1.87-.892-.252-.093-.437-.137-.62.137-.184.274-.71.892-.87 1.075-.158.184-.317.205-.59.07-2.652-1.324-4.32-2.316-5.834-4.925-.398-.687.398-.638 1.14-2.134.126-.252.063-.473-.03-.663-.095-.19-.778-1.87-1.066-2.564-.28-.674-.563-.58-.778-.592-.2-.01-.43-.01-.66-.01-.23 0-.6.086-.913.431-.314.346-1.198 1.173-1.198 2.86 0 1.687 1.23 3.317 1.402 3.546.173.23 2.42 3.693 5.86 5.176 2.87 1.236 3.453 1.01 4.673.896 1.22-.114 2.617-.852 2.985-1.677.368-.826.368-1.534.258-1.677-.109-.143-.398-.23-.672-.367z" />
+        </svg>
+        <span className="absolute left-16 bg-white border-2 border-charcoal text-charcoal font-fredoka font-extrabold text-[10px] px-3 py-1 rounded-xl shadow-[2px_2px_0px_0px_#2D2A26] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          Chat on WhatsApp
+        </span>
+      </a>
     </div>
   );
 }
