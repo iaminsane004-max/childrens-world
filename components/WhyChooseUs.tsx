@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.04, duration: 0.4 }}
-              className={`cartoon-card ${feature.color} p-6 flex flex-col items-start`}
+              className={`cartoon-card ${feature.color} p-6 flex flex-col items-start w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]`}
             >
               <div className="w-10 h-10 rounded-xl bg-white border-3 border-charcoal shadow-[2px_2px_0px_0px_#2D2A26] flex items-center justify-center mb-4">
                 {feature.icon}

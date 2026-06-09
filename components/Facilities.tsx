@@ -6,11 +6,10 @@ import { Shield, Home, TreePine, Moon, Utensils, BookHeart, Palette, GraduationC
 const facilities = [
   { title: "Safe Classrooms", desc: "Sunny learning rooms with soft-edge tables and child-proof gates.", icon: <Shield size={20} />, color: "bg-sky-cyan" },
   { title: "Indoor Soft Zone", desc: "Soft play climbers, blocks, and visual sensory boards.", icon: <Home size={20} />, color: "bg-mint-green" },
-  { title: "Outdoor Yard", desc: "Locked outdoor play yard with soft rubber mulch safety flooring.", icon: <TreePine size={20} />, color: "bg-sunny-yellow" },
+  { title: "Playground", desc: "Equipped play area with safe slides, swings, and climbing frames.", icon: <TreePine size={20} />, color: "bg-sunny-yellow" },
   { title: "Nap & Rest Zone", desc: "Cozy quiet rooms with clean individual mats for peaceful nap times.", icon: <Moon size={20} />, color: "bg-coral-peach" },
   { title: "Dietician Meals", desc: "Cooked sanitary meals focusing on plant nutrients and allergies.", icon: <Utensils size={20} />, color: "bg-lilac-purple" },
   { title: "Reading Corner", desc: "Picture storybooks, sensory books, and cozy kid lounge logs.", icon: <BookHeart size={20} />, color: "bg-white" },
-  { title: "Art & Craft Studio", desc: "Colorful creative zones with non-toxic clay, paints, and easels.", icon: <Palette size={20} />, color: "bg-sunny-yellow" },
   { title: "Tuition Desk", desc: "Quiet study zones with charts, books, and curriculum mentors.", icon: <GraduationCap size={20} />, color: "bg-mint-green" },
 ];
 
@@ -33,7 +32,7 @@ export default function Facilities() {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {facilities.map((facility, idx) => (
             <motion.div
               key={idx}
@@ -41,7 +40,7 @@ export default function Facilities() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.03, duration: 0.4 }}
-              className={`cartoon-card ${facility.color} p-5 flex flex-col items-start`}
+              className={`cartoon-card ${facility.color} p-5 flex flex-col items-start w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]`}
             >
               <div className="w-10 h-10 rounded-xl bg-white border-3 border-charcoal shadow-[2px_2px_0px_0px_#2D2A26] flex items-center justify-center mb-4">
                 {facility.icon}

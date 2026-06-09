@@ -312,7 +312,7 @@ export default function Home() {
 
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="flex flex-wrap justify-center gap-8"
           >
             {[
               { title: "Infant Care", age: "2 to 18 Months", desc: "Safe nurseries with personal cribs, sensory play guides, and feeding logs.", time: "Full & Half Day", bg: "bg-white", icon: <Baby size={22} className="text-charcoal" /> },
@@ -324,7 +324,7 @@ export default function Home() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className={`cartoon-card ${program.bg} p-6 flex flex-col justify-between`}
+                className={`cartoon-card ${program.bg} p-6 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]`}
               >
                 <div>
                   <div className="w-11 h-11 rounded-xl bg-white border-3 border-charcoal shadow-[2px_2px_0px_0px_#2D2A26] flex items-center justify-center mb-5">
