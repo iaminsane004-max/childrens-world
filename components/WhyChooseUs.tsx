@@ -8,9 +8,8 @@ const features = [
   { title: "Patient Mentors", desc: "Qualified educators who love teaching with visuals and fun.", icon: <Users size={20} className="text-charcoal" />, color: "bg-mint-green" },
   { title: "Super Safe Area", desc: "Locked safety gates, perimeter fencing, and vetted entries.", icon: <Heart size={20} className="text-charcoal" />, color: "bg-coral-peach" },
   { title: "Fun Playground", desc: "Equipped play area with safe slides, swings, and climbing frames.", icon: <Smile size={20} className="text-charcoal" />, color: "bg-sky-cyan" },
-  { title: "Happy Breakfast", desc: "Fresh, healthy meals planned by pediatric dietician guides.", icon: <Coffee size={20} className="text-charcoal" />, color: "bg-lilac-purple" },
+  { title: "Homely Meals", desc: "Fresh, healthy meals prepared for kids, even at short notice.", icon: <Coffee size={20} className="text-charcoal" />, color: "bg-lilac-purple" },
   { title: "Study Guides", desc: "Curated academic tutoring packages and daily homework help.", icon: <BookOpen size={20} className="text-charcoal" />, color: "bg-white" },
-  { title: "Creative Play", desc: "Focusing on hand-eye coordination, speech, and socialization.", icon: <Brain size={20} className="text-charcoal" />, color: "bg-sunny-yellow" },
   { title: "Open Desk Policy", desc: "Transparent review cycles and daily direct phone reports.", icon: <MessageSquare size={20} className="text-charcoal" />, color: "bg-mint-green" },
 ];
 
