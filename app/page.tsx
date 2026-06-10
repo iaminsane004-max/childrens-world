@@ -180,21 +180,25 @@ export default function Home() {
           >
             {isMobileView ? (
               <>
-                {/* Mobile View: Full background video with no yellow background */}
+                {/* Solid dark background to ensure homepage is hidden while video loads */}
+                <div className="absolute inset-0 bg-charcoal z-0" />
+
+                {/* Mobile View: Full background video */}
                 <video
-                  src="/123.MOV"
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                  src="/123.mp4"
+                  className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10"
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="auto"
                 />
                 
                 {/* Subtle dark overlay to ensure readability of the logo and button */}
-                <div className="absolute inset-0 bg-black/30 z-0 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 z-20 pointer-events-none" />
 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-between h-[65vh] px-6 text-center">
+                <div className="relative z-30 flex flex-col items-center justify-between h-[65vh] px-6 text-center">
                   <div className="flex-1 flex flex-col items-center justify-center">
                     {/* Logo only */}
                     <div className="text-4xl font-fredoka font-extrabold text-white flex flex-col items-center gap-3 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">
@@ -421,12 +425,13 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-[280px] aspect-[9/16] bg-white border-4 border-charcoal rounded-[2rem] shadow-[8px_8px_0px_0px_#2D2A26] overflow-hidden group">
                 <video 
-                  src="/123.MOV"
+                  src="/123.mp4"
                   className="w-full h-full object-cover"
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="auto"
                 />
               </div>
             </div>
