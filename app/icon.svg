@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .brand-text {
+      font-family: 'Fredoka', 'Nunito', 'Comic Sans MS', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      fill: #2D2A26;
+    }
+  </style>
+  
+  <!-- CHILDREN'S text -->
+  <text x="50" y="38" class="brand-text" font-size="15" text-anchor="middle" letter-spacing="0.2">CHILDREN'S</text>
+  
+  <!-- WORLD capsule container -->
+  <g transform="translate(10, 46) rotate(-2)">
+    <!-- Drop Shadow -->
+    <rect x="3" y="3" width="80" height="34" rx="10" fill="#2D2A26" />
+    <!-- Main Yellow Box -->
+    <rect x="0" y="0" width="80" height="34" rx="10" fill="#FFDC60" stroke="#2D2A26" stroke-width="3.5" />
+    <!-- WORLD text -->
+    <text x="40" y="23" class="brand-text" font-size="14" text-anchor="middle" letter-spacing="0.5">WORLD</text>
+  </g>
+</svg>
