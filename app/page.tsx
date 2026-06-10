@@ -124,11 +124,24 @@ export default function Home() {
     window.open(whatsappUrl, "_blank");
   };
 
-  // Page Loading screen timer
+  const [isMobileView, setIsMobileView] = useState(false);
+
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
-    return () => clearTimeout(timer);
+    const checkMobile = () => {
+      setIsMobileView(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  // Page Loading screen timer (Desktop only)
+  useEffect(() => {
+    if (!isMobileView && isLoading) {
+      const timer = setTimeout(() => setIsLoading(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobileView, isLoading]);
 
   // Sticky Nav state listener
   useEffect(() => {
@@ -161,28 +174,76 @@ export default function Home() {
         {isLoading && (
           <motion.div
             key="loader"
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-sunny-yellow"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: "easeInOut" }}
           >
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-              className="mb-8"
-            >
-              <Appy />
-            </motion.div>
-            <motion.h1
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-6xl font-fredoka font-extrabold text-charcoal tracking-wide text-center uppercase"
-            >
-              CHILDREN&apos;S WORLD
-            </motion.h1>
-            <span className="text-xs uppercase font-fredoka tracking-[0.25em] text-charcoal/60 mt-4">
-              Making learning happy & simple since 2002
-            </span>
+            {isMobileView ? (
+              <>
+                {/* Mobile View: Full background video with no yellow background */}
+                <video
+                  src="/123.MOV"
+                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                
+                {/* Subtle dark overlay to ensure readability of the logo and button */}
+                <div className="absolute inset-0 bg-black/30 z-0 pointer-events-none" />
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center justify-between h-[65vh] px-6 text-center">
+                  <div className="flex-1 flex flex-col items-center justify-center">
+                    {/* Logo only */}
+                    <div className="text-4xl font-fredoka font-extrabold text-white flex flex-col items-center gap-3 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">
+                      <span>CHILDREN&apos;S</span>
+                      <span className="bg-sunny-yellow text-charcoal px-4 py-1.5 rounded-2xl border-3 border-charcoal shadow-[4px_4px_0px_0px_#2D2A26] inline-block -rotate-2">
+                        WORLD
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Click/Tap to Enter Prompt */}
+                  <div className="w-full flex justify-center pb-6">
+                    <button
+                      onClick={() => setIsLoading(false)}
+                      className="cartoon-btn bg-sunny-yellow text-charcoal text-base px-8 py-3.5 w-full max-w-[280px] cursor-pointer shadow-[5px_5px_0px_0px_#2D2A26] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#2D2A26] transition-all"
+                    >
+                      Proceed to Home Page
+                    </button>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                {/* Desktop View: Solid yellow background */}
+                <div className="absolute inset-0 bg-sunny-yellow z-0" />
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                  <motion.div
+                    animate={{ y: [0, -20, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                    className="mb-8"
+                  >
+                    <Appy />
+                  </motion.div>
+                  <motion.h1
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-4xl md:text-6xl font-fredoka font-extrabold text-charcoal tracking-wide text-center uppercase px-6"
+                  >
+                    CHILDREN&apos;S WORLD
+                  </motion.h1>
+                  <span className="text-xs uppercase font-fredoka tracking-[0.25em] text-charcoal/60 mt-4 px-4">
+                    Making learning happy & simple since 2002
+                  </span>
+                </div>
+              </>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
