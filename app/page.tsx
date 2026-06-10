@@ -438,7 +438,7 @@ export default function Home() {
                     <div className="w-10 h-10 rounded-xl bg-white border-3 border-charcoal flex items-center justify-center text-charcoal flex-shrink-0"><Mail size={18} /></div>
                     <div>
                       <div className="text-[10px] text-charcoal/60 font-fredoka font-extrabold uppercase">Email Desk</div>
-                      <div className="font-fredoka font-extrabold text-sm text-charcoal">hello@childrensworld.edu</div>
+                      <div className="font-fredoka font-extrabold text-sm text-charcoal">childrensworlddc.2002@gmail.com</div>
                     </div>
                   </div>
                 </div>
