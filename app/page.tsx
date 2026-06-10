@@ -593,8 +593,19 @@ export default function Home() {
             <a href="#" className="hover:text-sunny-yellow transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-sunny-yellow transition-colors">Terms of Service</a>
           </div>
-          <div className="text-[10px] text-white/40 font-fredoka">
-            &copy; 2026 Children&apos;s World. Handcrafted with happy outlines.
+          <div className="text-[10px] text-white/40 font-fredoka text-center md:text-right space-y-1">
+            <div>&copy; 2026 Children&apos;s World. Handcrafted with happy outlines.</div>
+            <div className="text-[9px]">
+              Designed and Developed by{" "}
+              <a 
+                href="https://www.plgdinn.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-sunny-yellow text-white/60 transition-colors underline font-extrabold"
+              >
+                Plgdin Innovations LLP
+              </a>
+            </div>
           </div>
         </div>
       </footer>
